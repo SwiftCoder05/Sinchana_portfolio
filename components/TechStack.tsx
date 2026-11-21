@@ -9,8 +9,7 @@ export function TechStack() {
   return (
     <section className="section wrap" id="stack">
       <div className="section-head">
-        <p className="kicker">Engineering stack</p>
-        <p className="index">04 / Tools</p>
+        <p className="kicker">Skills</p>
       </div>
       <div className="stack-board">
         {stackGroups.map((group) => (

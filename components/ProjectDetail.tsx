@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { DocuChatVisual, Mock2WinVisual } from "@/components/ProjectVisuals";
 import type { projects } from "@/content/site";
 
 type Project = (typeof projects)[keyof typeof projects];
@@ -19,7 +18,6 @@ export function ProjectDetail({ project }: { project: Project }) {
             {project.kind}
           </p>
         </div>
-        {project.slug === "mock2win" ? <Mock2WinVisual /> : <DocuChatVisual />}
       </div>
       <div className="blocks">
         <section className="block">
@@ -58,6 +56,17 @@ export function ProjectDetail({ project }: { project: Project }) {
           <a className="btn btn-primary" href={project.github} target="_blank" rel="noreferrer">
             GitHub
           </a>
+          {"live" in project && project.live ? (
+            <a
+              className="btn"
+              style={{ marginLeft: "0.8rem" }}
+              href={project.live}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Live demo
+            </a>
+          ) : null}
         </section>
       </div>
     </article>

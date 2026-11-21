@@ -1,12 +1,12 @@
 export const site = {
   name: "Sinchana S",
-  role: "Software Engineer",
+  role: "AI Engineer",
   positioning: "Backend · AI · Full-Stack Systems",
   location: "Bengaluru, India",
   headline: "I build software systems that turn complex problems into simple experiences.",
   intro:
-    "Software Engineer working across backend systems, AI-powered applications, APIs, and cloud infrastructure.",
-  currently: "Prudential plc Technology",
+    "AI Engineer building backend systems, generative AI applications, APIs, and cloud infrastructure on AWS.",
+  currently: "Campusmesh Technology",
   email: "sinchanas0512@gmail.com",
   phone: "+91 8217823743",
   github: "https://github.com/SwiftCoder05",
@@ -24,27 +24,30 @@ export const education = {
 
 export const experience = [
   {
+    id: "campusmesh",
+    company: "Campusmesh Technology",
+    role: "AI Engineer",
+    dates: "Sept 2026 — Present",
+    location: "Remote",
+    summary: "Leading CampusIQ and restructuring a large serverless backend into microservices.",
+    bullets: [
+      "Led the development of CampusIQ, an AI-powered campus intelligence assistant using AWS Bedrock and Lambda, designing permission-aware event discovery, personalized responses, and a scalable retrieval architecture.",
+      "Optimized backend architecture by restructuring 110 AWS Lambda functions and 145 API routes into 9 microservices, improving modularity, code reusability, and deployment efficiency.",
+    ],
+    stack: ["AWS Bedrock", "AWS Lambda", "Amazon S3", "DynamoDB", "Microservices", "RAG"],
+  },
+  {
     id: "prudential",
     company: "Prudential plc Technology",
-    role: "Software Engineer",
-    dates: "Feb 2026 — Present",
+    role: "Engineer Intern",
+    dates: "Feb 2026 — July 2026",
     location: "Bengaluru, India",
-    summary: "Backend services, APIs, and AI-supporting workflows in production engineering teams.",
+    summary: "Enterprise backend services, REST APIs, and workflow automation.",
     bullets: [
-      "Developed scalable backend services and enterprise applications using Python and cloud-native technologies.",
-      "Built and maintained reliable REST APIs and workflow automation solutions supporting AI-powered applications.",
-      "Designed and developed Fast APIs to improve response relevance and retrieval accuracy.",
-      "Collaborated with cross-functional teams in Agile environments, participating in sprint planning, standups, and code reviews.",
+      "Developed scalable enterprise-grade backend services supporting 1000+ user requests.",
+      "Built REST APIs, workflow automation, and real-time communication integrations.",
     ],
-    stack: [
-      "Python",
-      "FastAPI",
-      "REST APIs",
-      "GCP",
-      "Cloud Run",
-      "Google ADK",
-      "Agent orchestration",
-    ],
+    stack: ["Python", "FastAPI", "REST APIs", "Workflow automation"],
   },
 ] as const;
 
@@ -52,42 +55,26 @@ export const stackGroups = [
   {
     id: "languages",
     label: "Languages",
-    items: ["Python", "TypeScript", "JavaScript"],
-  },
-  {
-    id: "backend",
-    label: "Backend",
-    items: ["Node.js", "FastAPI", "REST APIs"],
-  },
-  {
-    id: "data",
-    label: "Data",
-    items: ["PostgreSQL", "Redis"],
-  },
-  {
-    id: "ai",
-    label: "AI",
-    items: [
-      "LangChain",
-      "RAG",
-      "Embeddings",
-      "Vector Search",
-      "OpenAI",
-      "Google ADK",
-      "Agentic AI",
-      "Workflow orchestration",
-      "Neural networks",
-      "Deep learning",
-    ],
+    items: ["Python", "JavaScript", "SQL", "DynamoDB"],
   },
   {
     id: "cloud",
-    label: "Cloud",
-    items: ["GCP", "Cloud Run", "Git", "GitHub", "CI/CD", "Docker", "Kubernetes"],
+    label: "Cloud & DevOps",
+    items: ["Amazon Bedrock", "Amazon S3", "GCP", "Docker", "Kubernetes"],
+  },
+  {
+    id: "backend",
+    label: "Backend & APIs",
+    items: ["Next.js", "FastAPI", "Node.js", "REST APIs", "Microservices"],
+  },
+  {
+    id: "ai",
+    label: "AI & Generative AI",
+    items: ["Amazon Bedrock", "OpenAI", "LangChain", "LangGraph", "RAG", "LLMs", "Embeddings"],
   },
 ] as const;
 
-export type ProjectSlug = "mock2win" | "docuchat";
+export type ProjectSlug = "mock2win" | "kaamsetu";
 
 export const projects: Record<
   ProjectSlug,
@@ -100,6 +87,7 @@ export const projects: Record<
     blurb: string;
     stack: string[];
     github: string;
+    live?: string;
     problem: string;
     built: string;
     architecture: string;
@@ -109,12 +97,12 @@ export const projects: Record<
   mock2win: {
     slug: "mock2win",
     name: "Mock2Win",
-    index: "01",
+    index: "02",
     kind: "AI Interview Platform",
     year: "2025",
     blurb:
       "A voice-first mock interview system: you talk, the interviewer talks back, the session is stored, and feedback is generated from the transcript.",
-    stack: ["TypeScript", "Next.js", "Vapi AI", "WebRTC", "Python"],
+    stack: ["Next.js", "Vapi AI", "WebRTC", "REST APIs"],
     github: "https://github.com/SwiftCoder05/Mock2Win",
     problem:
       "Written mock interviews miss the actual failure mode: thinking out loud under time pressure. I wanted a practice loop that felt like a live call, not a form.",
@@ -127,36 +115,35 @@ export const projects: Record<
       "Speech start/end events drive the speaking indicator",
       "Final transcripts are captured and stored as the conversation",
       "Auth: sign-in / sign-up with Firebase, session cookie for a week",
-      "Resume also lists Python backend services for voice workflows and REST around the session",
     ],
   },
-  docuchat: {
-    slug: "docuchat",
-    name: "DocuChat",
-    index: "02",
-    kind: "Document Q&A / RAG",
+  kaamsetu: {
+    slug: "kaamsetu",
+    name: "KaamSetu",
+    index: "01",
+    kind: "AI-Powered Job Search & Recruiter Outreach",
     year: "2025",
     blurb:
-      "Ask a document a question in plain language. The system retrieves the relevant chunks, then answers from that context.",
-    stack: ["LangChain", "RAG", "Pinecone", "Embeddings", "Semantic Search"],
-    github: "https://github.com/SwiftCoder05/DocuChat",
+      "A job-search platform that manages resumes and recruiter contacts, and uses LLM workflows to write context-aware outreach emails.",
+    stack: ["Django", "LangGraph", "RAG", "LLMs"],
+    github: "https://github.com/SwiftCoder05/KaamSetu",
+    live: "https://kaamsetu-16uw.onrender.com/",
     problem:
-      "LLMs guess. For PDFs, DOCX, and notes, guessing is the wrong default. The answer should come from the file you actually uploaded.",
+      "Job hunting is a pile of scattered resumes, contacts, and copy-pasted emails. I wanted one workflow that keeps it organised and makes each outreach actually relevant.",
     built:
-      "A Python RAG application that loads PDFs, DOCX, TXT, or Wikipedia pages, splits them into chunks, embeds those chunks, stores them in a vector index, and answers questions using retrieved context. Conversations can continue with memory instead of starting from zero each turn.",
+      "A Django-based job-search platform with resume management, recruiter contact management, and personalised email outreach, streamlining the whole job application workflow.",
     architecture:
-      "LangChain orchestrates the pipeline. OpenAI text-embedding-3-small turns chunks and queries into vectors. Pinecone holds the index for similarity search. GPT-3.5-Turbo writes the final answer from the retrieved top-K chunks. The documented flow is load → split → embed → store → retrieve → generate.",
+      "LLM-powered workflows built with LangGraph and RAG generate context-aware recruiter emails and assist with job-description-based resume analysis and tailoring.",
     notes: [
-      "Sources: PDF, DOCX, TXT, Wikipedia",
-      "Embeddings: OpenAI text-embedding-3-small",
-      "Generation: GPT-3.5-Turbo with retrieved context",
-      "Vector store: Pinecone for production-style retrieval",
-      "Multi-turn memory so follow-up questions stay on the same documents",
+      "Resume management and recruiter contact management",
+      "Personalised email outreach",
+      "LangGraph + RAG for context-aware recruiter emails",
+      "Job-description-based resume analysis and tailoring",
     ],
   },
 };
 
-export const projectList = [projects.mock2win, projects.docuchat] as const;
+export const projectList = [projects.kaamsetu, projects.mock2win] as const;
 
 export const nav = [
   { href: "/#work", id: "work", label: "Work" },

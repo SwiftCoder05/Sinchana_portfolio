@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/content/site";
-import { Corners } from "./Corners";
 
 export function Hero() {
   return (
@@ -9,8 +8,7 @@ export function Hero() {
       <div className="hero-grid">
         <div className="hero-copy">
           <p className="kicker">
-            <span className="live-dot" />
-            Software Engineer · Bengaluru
+            AI Engineer · Bengaluru
           </p>
           <h1>{site.headline}</h1>
           <p className="lede">{site.intro}</p>
@@ -27,17 +25,11 @@ export function Hero() {
               GitHub
             </a>
           </div>
-          <div className="meta-row">
-            <span>
-              <span className="blink" />
-              Now · {site.currently}
-            </span>
-            <span>{site.positioning}</span>
-          </div>
+          <p className="meta-row">
+            Currently {site.role} at {site.currently}
+          </p>
         </div>
         <div className="portrait">
-          <span className="portrait-orbit" aria-hidden="true" />
-          <span className="portrait-orbit portrait-orbit-2" aria-hidden="true" />
           <div className="portrait-oval">
             <Image
               src="/profile.jpg"
@@ -47,7 +39,6 @@ export function Hero() {
               priority
             />
           </div>
-          <Corners />
         </div>
       </div>
     </section>

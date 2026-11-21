@@ -5,8 +5,7 @@ export function Projects() {
   return (
     <section className="section wrap" id="work">
       <div className="section-head">
-        <p className="kicker">Selected work</p>
-        <p className="index">01 / Projects</p>
+        <p className="kicker">Projects</p>
       </div>
       {projectList.map((project) => (
         <ProjectCard key={project.slug} project={project} />

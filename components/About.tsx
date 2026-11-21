@@ -4,8 +4,7 @@ export function About() {
   return (
     <section className="section wrap" id="about">
       <div className="section-head">
-        <p className="kicker">A little about me</p>
-        <p className="index">02 / About</p>
+        <p className="kicker">About</p>
       </div>
       <div className="about-grid">
         <div>
@@ -19,14 +18,15 @@ export function About() {
               wiring that keeps them from falling over.
             </p>
             <p>
-              At {site.currently} I write Python services and REST/FastAPI
-              endpoints, then sit with the team through sprints, standups, and
-              reviews until the thing is actually shippable.
+              At {site.currently} I led the development of CampusIQ, an
+              AI-powered campus intelligence assistant using AWS Bedrock and
+              Lambda, designing permission-aware event discovery, personalized
+              responses, and a scalable retrieval architecture.
             </p>
             <p>
               Side projects tend to sit in the same overlap — voice sessions,
-              document Q&amp;A, embeddings — because that is where interface
-              design and systems work have to agree.
+              LangGraph and RAG-driven job-search workflows — because that is
+              where interface design and systems work have to agree.
             </p>
           </div>
           <div className="facts">

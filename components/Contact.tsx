@@ -5,13 +5,12 @@ export function Contact() {
     <section className="section wrap" id="contact">
       <div className="section-head">
         <p className="kicker">Contact</p>
-        <p className="index">05 / Talk</p>
       </div>
       <div className="contact">
         <div>
-          <h2>Have a problem worth building?</h2>
+          <h2>Get in touch</h2>
           <p className="lede" style={{ marginTop: "1rem" }}>
-            Let&apos;s talk.
+            Open to work and collaborations.
           </p>
         </div>
         <div>

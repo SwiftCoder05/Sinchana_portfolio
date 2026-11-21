@@ -12,10 +12,10 @@ import "@fontsource/ibm-plex-mono/500.css";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: `${site.name} — Software Engineer`,
+  title: `${site.name} — AI Engineer`,
   description: `${site.intro} Based in ${site.location}.`,
   openGraph: {
-    title: `${site.name} — Software Engineer`,
+    title: `${site.name} — AI Engineer`,
     description: site.headline,
     locale: "en_IN",
     type: "website",
